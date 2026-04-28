@@ -25,7 +25,7 @@ _llm = ChatGroq(
 )
 
 
-def _extrair_dados_entrevista(dados: dict) -> dict | None:
+def _extrair_dados_entrevista(dados: dict):
     """Verifica se todos os dados da entrevista foram coletados."""
     campos_necessarios = ["renda_mensal", "tipo_emprego", "despesas_fixas", "num_dependentes", "tem_dividas"]
     if all(k in dados for k in campos_necessarios):
